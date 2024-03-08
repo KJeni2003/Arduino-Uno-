@@ -1,0 +1,23 @@
+void setup() {
+  pinMode(13,INPUT);
+  pinMode(12,OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  bool value=digitalRead(13);
+     if(value==1)
+     {
+      Serial.println("ON");
+      digitalWrite(12,HIGH);
+
+
+     }
+     else 
+     {
+     Serial.println("OFF");
+     delay(1000);
+      digitalWrite(12,LOW);
+     }
+}
